@@ -67,5 +67,28 @@ for linea in file:
     print(posicio, rotacions, numero, posicio_anterior)        #posicio = 100 + posicio 
 
 print(rotacions)
-        
-        
+
+#day 1 2024
+
+archivo = "input.txt"
+file = open(archivo)
+columnaA = list()
+columnaB = list()
+for linea in file:
+    
+    listaLinea = linea.strip().split("   ")
+    columnaA.append(listaLinea[0])
+    columnaB.append(listaLinea[1])
+print(columnaA, columnaB) 
+
+columnaA.sort()
+columnaB.sort()
+
+print(columnaA, columnaB) 
+suma = 0
+for index in range(len(columnaA)):
+    Resta = abs(int(columnaA[index]) - int(columnaB[index]))
+    print(Resta)
+    suma = suma + Resta
+    print(index, columnaA[index], columnaB[index])
+print(suma)
