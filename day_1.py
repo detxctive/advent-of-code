@@ -92,3 +92,26 @@ for index in range(len(columnaA)):
     suma = suma + Resta
     print(index, columnaA[index], columnaB[index])
 print(suma)
+
+#day 1 part 2
+
+archivo = "input.txt"
+file = open(archivo)
+columnaA = list()
+columnaB = list()
+for linea in file:
+    
+    listaLinea = linea.strip().split("   ")
+    columnaA.append(int(listaLinea[0]))
+    columnaB.append(int(listaLinea[1]))
+#print(columnaA, columnaB) 
+
+columnaA.sort()
+columnaB.sort()
+
+print(columnaA, columnaB) 
+suma = 0
+for index in range(len(columnaA)):
+    factor1 = columnaA[index]
+    suma += factor1 * columnaB.count(factor1)
+print(suma)
